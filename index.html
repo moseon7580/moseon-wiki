@@ -4,100 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모선위키:대문</title>
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script/script.js"></script>
 </head>
 <body>
-    <header id="header-load">
-        <div class="container"></div>
-    </header>
+    <header id="header-load"></header>
     
     
-    <div class="container">
-        <div class="content-wrapper">
-            <main>
-                <div class="wiki-article-header">
-                    <div class="header-top">
-                        <div class="title-area">
-                            <h1><a href="#">나무위키:대문</a></h1>
-                            <div class="last-edit">최근 수정 시각: <time>2025-12-11 10:00:36</time></div>
-                        </div>
+    <main class="container mx-auto max-w-[1400px] flex justify-between items-center py-4">
+        <article></article>
 
-                        <div class="action-buttons">
-                            <a href="#" class="btn-action star" title="내 문서함">⭐ 20k</a>
-                            <a href="#" class="btn-action edit" title="편집">✏️ 편집</a>
-                            <a href="#" class="btn-action discuss" title="토론">💬 토론</a>
-                            <a href="#" class="btn-action history" title="역사">📜 역사</a>
-                            <button class="btn-more">⋮</button>
-                        </div>
-                    </div>
-                </div>
-
-                <section class="wiki-notice-box">
-                    <div class="notice-item">
-                        <div class="notice-icon">❓</div>
-                        <div class="notice-text">
-                            <strong>나무위키에 처음 오셨나요?</strong><br>
-                            먼저 <a href="#">규정</a>과 <a href="#">자주 하는 실수</a>, <a href="#">도움말</a>을 확인해 보세요.
-                        </div>
-                    </div>
-                    <div class="notice-item">
-                        <div class="notice-icon">📢</div>
-                        <div class="notice-text">
-                            <strong>나무위키 게시판</strong><br>
-                            <a href="#">공지</a> · <a href="#">그루터기</a> · <a href="#">문의</a> · <a href="#">신고</a> · <a href="#">편집 요청</a>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="wiki-license">
-                    <p>
-                        이 저작물은 <a href="#">CC BY-NC-SA 2.0 KR</a>에 따라 이용할 수 있습니다.<br>
-                        기여하신 문서의 저작권은 각 기여자에게 있으며, 각 기여자는 기여하신 부분의 저작권을 갖습니다.
-                    </p>
-                    <p class="warning">
-                        나무위키는 백과사전이 아니며 검증되지 않았거나, 편향적이거나, 잘못된 서술이 있을 수 있습니다.
-                    </p>
-                </section>
-            </main>
-            
-            <aside>
-                <div class="wiki-rolling-bar">
-                    <div class="rolling-label">
-                        <span class="icon">📈</span>
-                        <span class="label-text">인기 검색어</span>
-                    </div>
-                    <div class="rolling-content">
-                        <ul id="rolling-list">
-                            <li><a href="#">1. 캬하하</a></li>
-                            <li><a href="#">2. 윤가놈</a></li>
-                            <li><a href="#">3. 장시환</a></li>
-                            <li><a href="#">4. 시고니 위버</a></li>
-                            <li><a href="#">5. 대홍수</a></li>
-                            <li><a href="#">6. 흑백요리사 2</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </div>
+        <aside></aside>
+    </main>
 
     
-    <footer id="footer-load">
-        <div class="container"></div>
-    </footer>
+    <footer id="footer-load"></footer>
 
 
     <script>
-        // 파일을 불러와서 HTML에 끼워넣는 함수
-        async function loadHTML(id, file) {
-            const res = await fetch(file);
-            document.getElementById(id).innerHTML = await res.text();
-        }
+        // // 파일을 불러와서 HTML에 끼워넣는 함수
+        // async function loadHTML(id, file) {
+        //     const res = await fetch(file);
+        //     document.getElementById(id).innerHTML = await res.text();
+        // }
         
-        loadHTML('header-load', 'header.html');
-        loadHTML('footer-load', 'footer.html');
+        // loadHTML('header-load', 'header.html');
+        // loadHTML('footer-load', 'footer.html');
     </script>
 </body>
 </html>

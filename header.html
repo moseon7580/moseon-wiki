@@ -1,27 +1,39 @@
-<nav class="wiki-nav">
-    <div class="container nav-wrapper">
-        <a href="index.html" class="nav-logo">MS Wiki</a>
-
-        <div class="nav-menu">
-            <a href="#" class="nav-item">
-                <span class="icon">🕒</span> 
-                <span class="desktop-label">최근 변경</span>
-            </a>
-            <a href="#" class="nav-item">
-                <span class="icon">💬</span> 
-                <span class="desktop-label">최근 토론</span>
-            </a>
-            <!-- <a href="#" class="nav-item desktop-only">
-                <span class="icon">🛠️</span> 특수 기능
-            </a> -->
-        </div>
-
-        <div class="nav-right">
-            <div class="search-box">
-                <input type="text" placeholder="여기에서 검색">
-                <button type="button">🔍</button>
-            </div>
-            <a href="#" class="user-icon">👤</a>
-        </div>
+<header class="relative w-full bg-[#00a495] text-white">
+  <div class="container mx-auto max-w-[1400px] flex justify-between items-center py-4 px-4">
+    <div class="flex items-center font-bold text-xl">
+      <a href="/">모선위키</a>
     </div>
-</nav>
+
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="#" class="hover:underline">HOME</a>
+      <a href="#" class="hover:underline">ABOUT</a>
+      <a href="#" class="hover:underline">DREAM</a>
+      <a href="#" class="hover:underline">방명록</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="https://x.com/Mo_seon" target="_blank">💕</a>
+      <a href="https://spin-spin.com/Mo__seon" target="_blank">😂</a>
+      <a href="https://www.pixiv.net/users/14339244" target="_blank">👍</a>
+    </div>
+
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+      ☰
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#008c7f] border-t border-white/10 shadow-lg z-50 md:hidden">
+    <div class="flex flex-col p-4 space-y-4 font-medium">
+      <a href="#" class="hover:bg-black/10 py-2 px-2 rounded">HOME</a>
+      <a href="#" class="hover:bg-black/10 py-2 px-2 rounded">ABOUT</a>
+      <a href="#" class="hover:bg-black/10 py-2 px-2 rounded">DREAM</a>
+      <a href="#" class="hover:bg-black/10 py-2 px-2 rounded">방명록</a>
+      
+      <div class="flex space-x-6 pt-4 border-t border-white/20 text-xl">
+        <a href="https://x.com/Mo_seon" target="_blank">💕</a>
+        <a href="https://spin-spin.com/Mo__seon" target="_blank">😂</a>
+        <a href="https://www.pixiv.net/users/14339244" target="_blank">👍</a>
+      </div>
+    </div>
+  </div>
+</header>

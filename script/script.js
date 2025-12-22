@@ -1,30 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const rollingList = document.getElementById('rolling-list');
-    const items = rollingList.querySelectorAll('li');
-    const itemHeight = 40; // li의 높이
-    let currentIndex = 0;
+// 1. 파일을 불러오는 함수 (수정 없음)
+async function loadHTML(id, file) {
+    const res = await fetch(file);
+    document.getElementById(id).innerHTML = await res.text();
+}
 
-    function startRolling() {
-        setInterval(() => {
-            currentIndex++;
-            
-            // 부드럽게 위로 이동
-            rollingList.style.transition = "top 0.5s ease";
-            rollingList.style.top = `-${currentIndex * itemHeight}px`;
+// 2. 헤더 로딩이 "끝난 후"에 실행되도록 .then() 사용
+loadHTML('header-load', 'header.html').then(() => {
+    // 이제 헤더가 화면에 그려졌으므로 버튼을 찾을 수 있습니다.
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
 
-            // 마지막 복사본에 도달했을 때
-            if (currentIndex === items.length - 1) {
-                setTimeout(() => {
-                    // 애니메이션을 끄고 순식간에 진짜 1번으로 되돌림
-                    rollingList.style.transition = "none";
-                    rollingList.style.top = "0px";
-                    currentIndex = 0;
-                }, 500); // 애니메이션 시간(0.5초)이 끝난 뒤 실행
-            }
-        }, 3000); // 3초 간격
-    }
-
-    if (rollingList) {
-        startRolling();
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
     }
 });
+
+// 푸터 로딩
+loadHTML('footer-load', 'footer.html');
