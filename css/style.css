@@ -1,0 +1,32 @@
+/* 웹 폰트 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+
+
+
+/* 헤더 */
+/* 헤더를 위로 숨기는 클래스 */
+.header-hide {
+    transform: translateY(-100%);
+}
+
+
+
+/* 푸터 롤링 배너 */
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); } /* 전체 길이의 절반(복사본 시작점)에서 시작 */
+  100% { transform: translateX(0); }  /* 오른쪽 끝으로 이동 */
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content; /* 배너가 가로로 길게 늘어나도록 설정 */
+  animation: scroll-right 30s linear infinite; /* 30초 동안 무한 반복 */
+}
+
+/* 마우스를 올리면 멈추는 효과 (선택사항) */
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
